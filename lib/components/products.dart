@@ -14,7 +14,7 @@ class _ProductsState extends State<Products> {
 
   var product_list =[
     {
-      "name" : "Blazer",
+      "name" : "Shirt",
 
       "picture":"images/shirt1.png",
       "old price":100,
@@ -22,31 +22,31 @@ class _ProductsState extends State<Products> {
     },
     {
       "name" : "dress",
-      "picture":"images/i.jpg",
+      "picture":"images/shirt3.png",
       "old price":100,
       "price":50
     },
     {
       "name" : "Frock",
-      "picture":"images/i.jpg",
+      "picture":"images/shirt2.png",
       "old price":100,
       "price":50
     },
     {
       "name" : "Denim",
-      "picture":"images/i.jpg",
+      "picture":"images/shirt4.png",
       "old price":100,
       "price":50
     },
     {
       "name" : "shoes",
-      "picture":"images/i.jpg",
+      "picture":"images/shirt5.png",
       "old price":100,
       "price":50
     },
     {
       "name" : "toys",
-      "picture":"images/i.jpg",
+      "picture":"images/shirt6.png",
       "old price":100,
       "price":50
     },
@@ -132,7 +132,7 @@ class Single_prod extends StatelessWidget {
                       ],
                     )
                 ),
-                child: Image.asset(prod_picture,fit: BoxFit.cover,),
+                child: Image.asset(prod_picture,fit: BoxFit.fill,),
 
               ),
             ),

@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import 'components/horizantal_list.dart';
 import 'components/products.dart';
+import 'package:ecom/pages/login.dart';
 
 
 
@@ -150,6 +151,8 @@ class _HomeState extends State<Home> {
         images: [
           AssetImage('images/i1.jpg'),
           AssetImage('images/i2.jpg'),
+          AssetImage('images/i4.jpg'),
+          AssetImage('images/i3.png'),
         ],
         autoplay: true,
         animationCurve: Curves.fastOutSlowIn,

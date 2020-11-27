@@ -33,6 +33,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  firebase_auth: ^0.18.1+2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -54,8 +55,15 @@ flutter:
      - images/i1.jpg
      - images/i2.jpg
      - images/shirt1.png
+     - images/shirt2.png
+     - images/shirt3.png
+     - images/shirt4.png
+     - images/shirt5.png
+     - images/shirt6.png
      - images/L.jpg
      - images/L2.jpg
+     - images/i3.png
+     - images/i4.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

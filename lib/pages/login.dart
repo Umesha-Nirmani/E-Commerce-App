@@ -1,5 +1,7 @@
 import 'package:ecom/home.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'dart:async';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -7,6 +9,9 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  String _email;
+  String _password;
+  final GlobalKey<FormState>_formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,9 +41,16 @@ class _LoginPageState extends State<LoginPage> {
                           child: Padding(
                             padding: EdgeInsets.only(left: 12.0),
                             child: TextFormField(
+                              // ignore: missing_return
+                              validator: (input){
+                                if(input.isEmpty){
+                                  return'Please Input Your Email';
+                                }
+                              },
+                              onSaved: (input) => _email = input,
                               decoration: InputDecoration(
-                                hintText: 'Password',
-                                icon: Icon(Icons.lock_outline),
+                                hintText: 'Email',
+                                icon: Icon(Icons.email),
 
 
 
@@ -58,13 +70,20 @@ class _LoginPageState extends State<LoginPage> {
                           child: Padding(
                             padding: EdgeInsets.only(left: 12.0),
                             child: TextFormField(
+                              validator: (input){
+                                if(input.length < 6 ){
+                                  return "Your Password needs to be a atleast 6 characters";
+                                }
+                              },
+                              onSaved: (input) => _password = input,
                               decoration: InputDecoration(
-                                hintText: 'Your Email',
-                                icon: Icon(Icons.email),
+                                hintText: 'Password',
+                                icon: Icon(Icons.lock_outline),
 
 
 
                               ),
+                              obscureText: true,
                             ),
                           ),
                         )
@@ -78,12 +97,15 @@ class _LoginPageState extends State<LoginPage> {
                         child: MaterialButton(
                           child: Text('Login',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20.0),),
                           onPressed: (){
+
                             Navigator.of(context).push(MaterialPageRoute(
-                              builder: (_){
-                                return Home();
-                              }
+                                builder: (_){
+                                  return Home();
+                                }
                             ));
                           },
+
+
                           minWidth: MediaQuery.of(context).size.width,
                         ),
 
@@ -146,4 +168,19 @@ class _LoginPageState extends State<LoginPage> {
 
     );
   }
+
+  Future<void> signIn() async{
+    final formState = _formKey.currentState;
+    if(formState.validate()){
+      formState.save();
+      try{
+        UserCredential user = await   FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password);
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+      }catch(e){
+        print(e.message);
+      }
+
+    }
+  }
 }
+
