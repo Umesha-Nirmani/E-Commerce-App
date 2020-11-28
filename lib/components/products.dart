@@ -52,16 +52,43 @@ class _ProductsState extends State<Products> {
     },
     {
       "name" : "makeup",
-      "picture":"images/i.jpg",
+      "picture":"images/frock1.png",
+      "old price":100,
+      "price":50
+    },
+    {
+      "name" : "blouse",
+      "picture":"images/frock2.png",
+      "old price":100,
+      "price":50
+    },
+    {
+      "name" : "saree",
+      "picture":"images/frock3.png",
+      "old price":100,
+      "price":50
+    },
+
+    {
+      "name" : "oil",
+      "picture":"images/frock4.png",
       "old price":100,
       "price":50
     },
     {
       "name" : "oil",
-      "picture":"images/i.jpg",
+      "picture":"images/blouse1.png",
       "old price":100,
       "price":50
     },
+    {
+      "name" : "skirt",
+      "picture":"images/blouse2.png",
+      "old price":100,
+      "price":50
+    },
+
+
 
 
 

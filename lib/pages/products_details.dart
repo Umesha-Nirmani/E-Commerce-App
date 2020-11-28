@@ -295,6 +295,54 @@ class _Similar_productsState extends State<Similar_products> {
       "old price":100,
       "price":50
     },
+    {
+      "name" : "Blazer1",
+      "picture":"images/i.jpg",
+      "old price":100,
+      "price":50
+    },
+    {
+      "name" : "Blazer2",
+      "picture":"images/i.jpg",
+      "old price":100,
+      "price":50
+    },
+    {
+      "name" : "Blazer3",
+      "picture":"images/i.jpg",
+      "old price":100,
+      "price":50
+    },
+    {
+      "name" : "jeep",
+      "picture":"images/i.jpg",
+      "old price":100,
+      "price":50
+    },
+    {
+      "name" : "bus",
+      "picture":"images/i.jpg",
+      "old price":100,
+      "price":50
+    },
+    {
+      "name" : "van",
+      "picture":"images/i.jpg",
+      "old price":100,
+      "price":50
+    },
+    {
+      "name" : "ca7",
+      "picture":"images/i.jpg",
+      "old price":100,
+      "price":50
+    },
+    {
+      "name" : "car",
+      "picture":"images/i.jpg",
+      "old price":100,
+      "price":50
+    },
 
 
 
