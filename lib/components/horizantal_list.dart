@@ -16,7 +16,7 @@ class   HorzantalList extends StatelessWidget {
             imag_caption: 'Frock',
           ),
           Category(
-            image_location: 'images/H3.png',
+            image_location: 'images/H4.png',
             imag_caption: 'Short',
           ),
           Category(

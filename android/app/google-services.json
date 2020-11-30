@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "821562951122",
-    "firebase_url": "https://online-shopping-app-e275b.firebaseio.com",
-    "project_id": "online-shopping-app-e275b",
-    "storage_bucket": "online-shopping-app-e275b.appspot.com"
+    "project_number": "581765670468",
+    "firebase_url": "https://logecom-af1ba.firebaseio.com",
+    "project_id": "logecom-af1ba",
+    "storage_bucket": "logecom-af1ba.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:821562951122:android:6e110671d6d8a9cec9340b",
+        "mobilesdk_app_id": "1:581765670468:android:c4d87ff2b6cba1fb503e11",
         "android_client_info": {
           "package_name": "com.example.ecom"
         }
       },
       "oauth_client": [
         {
-          "client_id": "821562951122-n96if2k25gmdlmgdut3kfh6a14d09ko0.apps.googleusercontent.com",
+          "client_id": "581765670468-s139ebbkvvs18hs1uar8pm30dg9t483h.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCJdvOnFFfoiz7o_qWPNBWSlozPuokooLY"
+          "current_key": "AIzaSyBoLoDOdhqkaZrtSvQWWKMk-rGyTeOO-nw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "821562951122-n96if2k25gmdlmgdut3kfh6a14d09ko0.apps.googleusercontent.com",
+              "client_id": "581765670468-s139ebbkvvs18hs1uar8pm30dg9t483h.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

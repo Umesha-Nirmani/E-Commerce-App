@@ -1,7 +1,9 @@
-import 'package:ecom/home.dart';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'dart:async';
+
+import '../home.dart';
+
 
 class LoginPage extends StatefulWidget {
   @override
@@ -30,6 +32,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Center(
 
               child: Form(
+                key: _formKey,
                 child: Column(
                   children: [
                     Padding(
@@ -97,12 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                         child: MaterialButton(
                           child: Text('Login',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20.0),),
                           onPressed: (){
-
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (_){
-                                  return Home();
-                                }
-                            ));
+                            signIn();
                           },
 
 
@@ -169,18 +167,15 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Future<void> signIn() async{
-    final formState = _formKey.currentState;
-    if(formState.validate()){
-      formState.save();
+ void signIn() async {
+    if(_formKey.currentState.validate()){
+      _formKey.currentState.save();
       try{
-        UserCredential user = await   FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password);
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+        UserCredential user = await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password);
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
       }catch(e){
         print(e.message);
       }
-
     }
   }
 }
-

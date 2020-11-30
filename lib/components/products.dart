@@ -87,6 +87,90 @@ class _ProductsState extends State<Products> {
       "old price":100,
       "price":50
     },
+    {
+      "name" : "skirt",
+      "picture":"images/baby1.png",
+      "old price":100,
+      "price":50
+    },
+
+    {
+      "name" : "skirt",
+      "picture":"images/baby2.png",
+      "old price":100,
+      "price":50
+    },
+
+    {
+      "name" : "skirt",
+      "picture":"images/baby3.png",
+      "old price":100,
+      "price":50
+    },
+
+    {
+      "name" : "skirt",
+      "picture":"images/baby4.png",
+      "old price":100,
+      "price":50
+    },
+
+    {
+      "name" : "skirt",
+      "picture":"images/shoes1.png",
+      "old price":100,
+      "price":50
+    },
+    {
+      "name" : "skirt",
+      "picture":"images/shoes2.png",
+      "old price":100,
+      "price":50
+    },
+
+    {
+      "name" : "skirt",
+      "picture":"images/shoes3.png",
+      "old price":100,
+      "price":50
+    },
+
+    {
+      "name" : "skirt",
+      "picture":"images/shoes4.png",
+      "old price":100,
+      "price":50
+    },
+
+    {
+      "name" : "skirt",
+      "picture":"images/shoes5.png",
+      "old price":100,
+      "price":50
+    },
+
+    {
+      "name" : "skirt",
+      "picture":"images/shoes6.png",
+      "old price":100,
+      "price":50
+    },
+
+    {
+      "name" : "skirt",
+      "picture":"images/shoes7.png",
+      "old price":100,
+      "price":50
+    },
+
+    {
+      "name" : "skirt",
+      "picture":"images/shoes8.png",
+      "old price":100,
+      "price":50
+    },
+
+
 
 
 
