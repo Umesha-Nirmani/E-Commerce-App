@@ -1,4 +1,5 @@
 import 'package:ecom/pages/login.dart';
+import 'package:ecom/pages/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 

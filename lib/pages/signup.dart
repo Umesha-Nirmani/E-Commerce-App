@@ -1,33 +1,32 @@
-
-import 'package:ecom/pages/signup.dart';
+import 'package:ecom/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-import '../home.dart';
-
-
-class LoginPage extends StatefulWidget {
+class SignupPage extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _SignupPageState createState() => _SignupPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignupPageState extends State<SignupPage> {
+
   String _email;
   String _password;
+
   final GlobalKey<FormState>_formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+         return  Scaffold(
 
       body: Stack(
         children: [
-          Image.asset('images/L2.jpg',fit: BoxFit.fill,height: double.infinity,
+          Image.asset('images/L3.jpg',fit: BoxFit.fill,height: double.infinity,
             width: double.infinity,),
-         Container(
-           color: Colors.black.withOpacity(0.4),
-           height: double.infinity,
-           width: double.infinity,
-         ),
+          Container(
+            color: Colors.black.withOpacity(0.4),
+            height: double.infinity,
+            width: double.infinity,
+          ),
           Padding(
             padding: EdgeInsets.only(top:200.0),
             child: Center(
@@ -99,9 +98,9 @@ class _LoginPageState extends State<LoginPage> {
                         color: Colors.blue,
                         elevation: 0.0,
                         child: MaterialButton(
-                          child: Text('Login',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20.0),),
+                          child: Text('Signup',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20.0),),
                           onPressed: (){
-                            signIn();
+                            signUP();
                           },
 
 
@@ -110,31 +109,9 @@ class _LoginPageState extends State<LoginPage> {
 
                       ),
                     ),
-                   Padding (
-                       padding: EdgeInsets.only(top: 20.0,left: 25.0,right: 25.0),
 
-                        child:InkWell(
 
-                          child: Text('Forgot Password',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15.0),),
-                        )
 
-                    ),
-
-                    SizedBox(height: 15.0,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Text('Dont have an account? click here to',style: TextStyle(color: Colors.white,fontSize: 18.0),),
-                        SizedBox(width: 15.0,),
-                        InkWell(
-                          child: Text('sign up',style: TextStyle(fontSize: 18.0,fontWeight: FontWeight.bold,color: Colors.deepOrange),),
-                         onTap: (){
-                            SignupPage();
-
-                         },
-                        )
-                      ],
-                    ),
 
                     Expanded(child: Container(),),
                     Divider(color: Colors.white,),
@@ -171,15 +148,18 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
- void signIn() async {
+  void signUP() async {
     if(_formKey.currentState.validate()){
       _formKey.currentState.save();
       try{
-        UserCredential user = await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password);
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+        UserCredential user = await FirebaseAuth.instance.createUserWithEmailAndPassword(email: _email, password: _password);
+
+        Navigator.of(context).pop();
+        Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
       }catch(e){
         print(e.message);
       }
     }
   }
+
 }
